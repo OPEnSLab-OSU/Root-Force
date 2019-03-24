@@ -2,7 +2,9 @@
 OPEnS Lab repository dedicated to documentation and code for a scalable force sensor and all code related to Loom use for research in Arkansas.
 
 # Organization
-Separate branches in this repository should be made for the RootForce-Sensor, Loom-peripherals, First-Deployment, Hardware, and UARK-Instance-of-Loom.  These are to keep code that is done on different areas of the project separate and organized.  If you feel that the repo should be reorganized, notify the group in Basecamp of formatting changes you intend to make so that everyone is on the same page.  
+Separate branches in this repository should be made for the RootForce-Sensor, Loom-peripherals, First-Deployment, Hardware, and UARK-Instance-of-Loom.  
+
+These are to keep code that is done on different areas of the project separate and organized.  If you feel that the repo should be reorganized, notify the group in Basecamp of formatting changes you intend to make so that everyone is on the same page.  
 
 # RootForce-Sensor 
 Any Arduino code used in programming, calibrating, and logging RootForce Scalable Sensors.  
