@@ -79,7 +79,7 @@ void loop() {
   LPF_filter(volt);    // raw value to add to time series
   Serial.println(output); // should show the 
   
-  // need to add calibration and 
+  // need to add calibration info
   
   // uncomment to write to SD
   /*
