@@ -32,8 +32,8 @@
 #define LoadCell1 A0
 #define ChipSelSD 4
 
-
-
+long output = 0;
+float calib_factor = 0; // need to set after calibrating
 //const long cal = ;
 const long g = 9.81;
 
@@ -50,18 +50,21 @@ void setup() {
 
 void loop() {
   int val = analogRead(A0);
-  float volt= (3.3/1024)*val;
+  float volt = (3.3/1024)*val;
   Serial.println(volt);
   delay(100);
  
+  //output = calib_factor*volt*g; // output force
+  
+  // uncomment if writing to SD to get linear trend, std deviation etc.;
   /*
   File dataFile = SD.open("RootForce1", FILE_WRITE);
   // if the file is available, write to it:
   if (dataFile) {
-    dataFile.println(dataString);
+    dataFile.println(volt);  // replace with output to log expected force measurements
     dataFile.close();
     // print to the serial port too:
-    Serial.println(dataString);
+    Serial.println(volt);    // replace with output to log expected force measurements
   }
   // if the file isn't open, pop up an error:
   else {
