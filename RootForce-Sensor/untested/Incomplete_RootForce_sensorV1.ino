@@ -2,11 +2,12 @@
   Device #:
   Calibration:
 
-  Code version
+  Code version V1
+  
   Description:
       Code for RootForce sensors to log magnitudes of Force
       exerted by roots on environment. Includes code for calibration,
-      SD card logging, and low power mode.
+      SD card logging, and adjustabe software filtering.
 
   Setup:
       Calculations are made based on calibrations from known weight forces.
@@ -14,9 +15,8 @@
       voltage should result in a linear graph where voltage increases as
       more weight is applied in the direction of gravity.
 
-      This was used to calibrate for forces based on known weight forces
-      (kg * m/s^2) and can give an approximation in Newtons when the load
-      cell is turned 90 degrees on its side.
+      This code shoulb be used after calibrating based on known weight forces
+      (kg * m/s^2) and can give an approximation of Force magnitude in Newtons.
 
   Wiring:
       3V  - Red Wire of Load Cell
@@ -77,12 +77,16 @@ void loop() {
   delay(100);
 
   LPF_filter(volt);    // raw value to add to time series
-  Serial.println(output);
+  Serial.println(output); // should show the 
+  
+  // need to add calibration and 
+  
+  // uncomment to write to SD
   /*
     File dataFile = SD.open("RootForce1", FILE_WRITE);
     // if the file is available, write to it:
     if (dataFile) {
-    dataFile.println(dataString);
+    dataFile.println(output);
     dataFile.close();
     // print to the serial port too:
     Serial.println(dataString);
