@@ -14,7 +14,7 @@ Place Loom code adapted for Decagon soil moisture, Light/Pressure Sensor, and Ac
 This repo should store any code used to program microcontrollers/calibrate/etc. during the first deployment.  Students in Arkansas can place code that they used on sensors here for others to reference.  
 
 # Hardware
-This is for PCB BOM, and PCB schematics and other notes
+This is for the PCB BOM, Updated PCB schematics/gerbers, and other notes
 
 # UARK-Instance-of-Loom
 This repo should store the end result of the Loom peripherals branch and any added Loom Code settings for the RootForce Sensor (which outputs a generic analog signal in a way similar to decagon soil moisture sensors).  This repo should be created after at least one field test in AK, as an example of all working code in a proof-of-concept design.  
